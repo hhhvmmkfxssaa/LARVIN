@@ -9139,25 +9139,7 @@ database:srem(bot_id.."botss:Amir:List:Rd:Sudo", text)
 return false
 end
 end
-if text == ("مسح الردود المتعدده") and CoSu(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,'  *⌔︙عذࢪا عليڪ الاشتࢪاڪ في قناه البوت* \n*⌔︙اشتࢪڪ هنا عمࢪي* ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-local list = database:smembers(bot_id.."botss:Amir:List:Rd:Sudo")
-for k,v in pairs(list) do  
-database:del(bot_id.."botss:Amir:Add:Rd:Sudo:Text"..v) 
-database:del(bot_id.."botss:Amir:Add:Rd:Sudo:Text1"..v) 
-database:del(bot_id.."botss:Amir:Add:Rd:Sudo:Text2"..v)   
-database:del(bot_id.."botss:Amir:List:Rd:Sudo")
-end
-send(msg.chat_id_, msg.id_,"*⌔︙تم حذف ردود المتعدده*")
-end
+
 if text == ("مسح ردود المدير") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'List:Manager'..msg.chat_id_..'')
 for k,v in pairs(list) do
@@ -9397,112 +9379,7 @@ database:sadd(bot_id..'Spam:Texting'..msg.sender_user_id_,text)
 end  
 end
 end
-if text == ("الردود المتعدده") and CoSu(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,'  *⌔︙عذࢪا عليڪ الاشتࢪاڪ في قناه البوت* \n*⌔︙اشتࢪڪ هنا عمࢪي* ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-local list = database:smembers(bot_id.."botss:Amir:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده\nٴ≪┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉≫ٴ\n"
-for k,v in pairs(list) do
-db = "رساله "
-text = text..""..k.." >> {"..v.."} >> {"..db.."}\n"
-end
-if #list == 0 then
-text = "لا توجد ردود متعدده"
-end
-send(msg.chat_id_, msg.id_,"["..text.."]")
-end
-if text == "اضف رد متعدد" and CoSu(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,'  *⌔︙عذࢪا عليڪ الاشتࢪاڪ في قناه البوت* \n*⌔︙اشتࢪڪ هنا عمࢪي* ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-database:set(bot_id.."botss:Amir:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
-return send(msg.chat_id_, msg.id_,"*⌔︙ارسل الرد الذي اريد اضافته*")
-end
-if text == "حذف رد متعدد" and CoSu(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,'  *⌔︙عذࢪا عليڪ الاشتࢪاڪ في قناه البوت* \n*⌔︙اشتࢪڪ هنا عمࢪي* ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-database:set(bot_id.."botss:Amir:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
-return send(msg.chat_id_, msg.id_,"*⌔︙ارسل الان الكلمه لحذفها*")
-end
-if text then  
-local test = database:get(bot_id.."botss:Amir:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:Amir:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
-database:set(bot_id.."botss:Amir:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
-if text then   
-text = text:gsub('"',"") 
-text = text:gsub('"',"") 
-text = text:gsub("`","") 
-text = text:gsub("*","") 
-database:set(bot_id.."botss:Amir:Add:Rd:Sudo:Text"..test, text)  
-end  
-send(msg.chat_id_, msg.id_,"*⌔︙تم حفظ الرد الاول ارسل الرد الثاني*")
-return false  
-end  
-end
-if text then  
-local test = database:get(bot_id.."botss:Amir:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:Amir:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
-database:set(bot_id.."botss:Amir:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
-if text then   
-text = text:gsub('"',"") 
-text = text:gsub('"',"") 
-text = text:gsub("`","") 
-text = text:gsub("*","") 
-database:set(bot_id.."botss:Amir:Add:Rd:Sudo:Text1"..test, text)  
-end  
-send(msg.chat_id_, msg.id_,"*⌔︙تم حفظ الرد الثاني ارسل الرد الثالث*")
-return false  
-end  
-end
-if text then  
-local test = database:get(bot_id.."botss:Amir:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:Amir:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
-database:set(bot_id.."botss:Amir:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
-if text then   
-text = text:gsub('"',"") 
-text = text:gsub('"',"") 
-text = text:gsub("`","") 
-text = text:gsub("*","") 
-database:set(bot_id.."botss:Amir:Add:Rd:Sudo:Text2"..test, text)  
-end  
-send(msg.chat_id_, msg.id_,"*⌔︙تم حفظ الرد*")
-return false  
-end  
-end
-if text then
-local Text = database:get(bot_id.."botss:Amir:Add:Rd:Sudo:Text"..text)   
-local Text1 = database:get(bot_id.."botss:Amir:Add:Rd:Sudo:Text1"..text)   
-local Text2 = database:get(bot_id.."botss:Amir:Add:Rd:Sudo:Text2"..text)   
-if Text or Text1 or Text2 then 
-local texting = {
-Text,
-Text1,
-Text2
-}
-Textes = math.random(#texting)
-send(msg.chat_id_, msg.id_,texting[Textes])
-end
-end
+
 -------------------------------
 if text == ""..(database:get(bot_id..'Name:Bot') or 'لارفين').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_)  then 
