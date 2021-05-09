@@ -946,6 +946,34 @@ echo '*———————————~*\n✺✔{ الــدخــول } ⇎\n
 echo '*———————————~*\n✺✔{ مـده تـشغيـل الـسـيـرفـر }⇎\n*»» '"$uptime"'*'
 ]]):read('*all'))  
 end
+if database:get(bot_id.."Ed:DevBots") then
+if text and text:match("^(%d+)$") then
+local IdDe = text:match("^(%d+)$")
+tdcli_function ({ID = "GetUser",user_id_ = IdDe},function(arg,data) 
+if data.username_ ~= false then
+send(msg.chat_id_,msg.id_, "*⌔︙تم تغيير المطور الاساسي بنجاح*")
+local A = io.open("Info.lua", 'w')
+A:write([[
+token = "]]..token..[["
+SUDO = ]]..IdDe..[[  
+UserName = "]]..data.username_..[["
+]])
+A:close()
+database:del(bot_id.."Ed:DevBots")
+dofile('LARVIN.lua')  
+else
+send(msg.chat_id_,msg.id_, "*⌔︙عذرا صاحب الايدي لا يمتلك معرف ارسل ايدي اخر*")
+end
+end,nil)
+end
+end
+if text =='تغيير المطور الاساسي ⌔' and SudoBot(msg) then
+send(msg.chat_id_, msg.id_,'*⌔︙ ارسل ايدي المطور الاساسي الجديد*')
+database:set(bot_id..'Ed:DevBots',true) 
+end
+if text =='تغيير المطور الاساسي ⌔' and not SudoBot(msg) then
+send(msg.chat_id_, msg.id_,'*⌔︙لا يمكنك تغيير المطور الاساسي*')
+end
 if text == 'تحديث السورس ⌔' and DevLARVINW(msg) then 
 os.execute('rm -rf LARVIN.lua')
 os.execute('wget https://raw.githubusercontent.com/LARVINNTEAM/LARVIN/main/LARVIN.lua')
@@ -2431,7 +2459,7 @@ end
 if data.username_ then 
 if LARVINChengUserName ~= data.username_ then 
 local Text = {
-'شكو غيرت معرفك شنو نشروك بقنوات فضايح😂🥺',
+'شكو غيرت معرفك شنو نشروك بقنوات فضايح😂??',
 "هاها شو غيرت معرفك بس لا هددتك/ج الحب",
 "شسالفه شو غيرت معرفك 😐🌝",
 "غير معرفه خمطو بساع بساع \n هاذه معرفه : @"..data.username_.."",
@@ -9671,21 +9699,25 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 end
 if text and text:match("^كشف @(.*)$") then
-local username = text:match("^كشف @(.*)$") 
-function start_function(extra, result, success)
+local username = text:match("^كشف @(.*)$")
+function Function_v(extra, result, success)
 if result.id_ then
-tdcli_function ({ID = "GetUser",user_id_ = result.id_},function(extra,data) 
-local UserName = ("@"..data.username_ or "لا يوجد")
-local id = result.id_
-local rtp = Rutba(id,msg.chat_id_)
-texts ='*⌔︙الايدي » ('..id..')*\n*⌔︙المعرف » (*['..UserName..'])\n*⌔︙الرتبه » ('..rtp..')*\n*⌔︙نوع الكشف » بالمعرف*'
-end,nil)
+tdcli_function({ID = "GetUser",user_id_ = result.id_}, function(arg, data)
+if data.username_ then
+UserName_User = '@' .. data.username_
 else
-texts = ' *⌔︙لا يوجد حساب بهاذا المعرف*'
+UserName_User = 'لا يوجد'
 end
-send(msg.chat_id_, msg.id_, texts)
+local Id = data.id_
+local frLsn = data.first_name_..' '..(data.last_name_ or "")
+ local Status_Gps = Rutba(Id,msg.chat_id_)
+send(msg.chat_id_, msg.id_, '\n*⌔︙الاسم » ('..frLsn..')\n⌔︙الايدي » '..Id..'\n⌔︙المعرف » *['..UserName_User..']*\n⌔︙الرتبة » '..Status_Gps..'\n⌔︙نوع الكشف - بالمعرف*')
+end, nil)
+else
+send(msg.chat_id_, msg.id_, ' *⌔︙لا يوجد حساب بهاذا المعرف*')
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
+end
+tdcli_function({ID = "SearchPublicChat",username_ = username}, Function_v, nil)
 return false
 end
 if text and text:match("^كشف (%d+)$") then
