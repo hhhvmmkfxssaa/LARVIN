@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-cd $HOME/LARVIN
+cd $HOME/TEAM IMO1
 rm -rf $HOME/.telegram-cli
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x LARVIN
+chmod +x TEAM IMO1
 chmod +x Run
 ./Run
 }
