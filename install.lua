@@ -7,7 +7,7 @@ URL = require('socket.url')
 utf8 = require ('lua-utf8') 
 database = redis.connect('127.0.0.1', 6379) 
 Server_Done = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
-User = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
+User = io.popen("TTITITl"):read('*a'):gsub('[\n\r]+', '')
 IP = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a'):gsub('[\n\r]+', '')
 Name = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a'):gsub('[\n\r]+', '')
 Port = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):read('*a'):gsub('[\n\r]+', '')
@@ -67,24 +67,24 @@ Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."
 local RunBot = io.open("LARVIN", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
-cd $HOME/LARVIN
+cd $HOME/TEAM IMO1
 token="]]..database:get(Server_Done.."Token_Write")..[["
-rm -fr LARVIN.lua
-wget "https://raw.githubusercontent.com/LARVINNTEAM/LARVIN/main/LARVIN.lua"
+rm -fr TEAM IMO1.lua
+wget "https://raw.githubusercontent.com/IMO1TEAM/TEAM IMO/main/TEAM IMO1.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./LARVIN.lua -p PROFILE --bot=$token
+./tg -s ./TEAM IMO1.lua -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
 local RunTs = io.open("Run", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/LARVIN
+cd $HOME/TEAM IMO1
 while(true) do
 rm -fr ../.telegram-cli
-screen -S LARVIN -X kill
-screen -S LARVIN ./LARVIN
+screen -S TEAM IMO1 -X kill
+screen -S TEAM IMO1 ./LARVIN
 done
 ]])
 RunTs:close()
