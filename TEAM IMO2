@@ -9,19 +9,19 @@ database = redis.connect('127.0.0.1', 6379)
 sudos   = dofile("Info.lua")
 bot_id  = token:match("(%d+)")  
 SUDO = SUDO
-sudo_users = {SUDO,794292219,1223431389}   
+sudo_users = {SUDO,1920979714,1931068440}   
 print([[
 _        _    ______     _____ _   _ 
 | |      / \  |  _ \ \   / /_ _| \ | |
 | |     / _ \ | |_) \ \ / / | ||  \| |
 | |___ / ___ \|  _ < \ V /  | || |\  |
 |_____/_/   \_\_| \_\ \_/  |___|_| \_|
-> CH › @SourceLarvine
-~> DEVELOPER › @VvBvV
+> CH › @hueer65
+~> DEVELOPER › @TTITITl
 ]])
 io.popen("mkdir File_Bot") 
 io.popen("cd File_Bot && rm -rf commands.lua") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/LARVINNTEAM/Files_Larvin/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/IMO2TEAM/Files_Larvin/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -37,13 +37,13 @@ end
 function dl_cb(t,s)
 end
 function SudoBot(msg)  
-local LARVIN = false  
+local TEAM IMO2 = false  
 for k,v in pairs(sudo_users) do  
 if tonumber(msg.sender_user_id_) == tonumber(v) then  
-LARVIN = true  
+TEAM IMO2 = true  
 end  
 end  
-return LARVIN  
+return TEAM IMO2
 end 
 function LARVINSudoBot(sudo)  
 local TEND = false  
@@ -54,7 +54,7 @@ end
 end  
 return TEND  
 end 
-function DevLARVINW(msg) 
+function DevTEAM IMO2W(msg) 
 local hash = database:sismember(bot_id.."DEV:Sudo:T", msg.sender_user_id_) 
 if hash or SudoBot(msg) then  
 return true  
@@ -95,7 +95,7 @@ end
 end
 function Constructor(msg)
 local hash = database:sismember(bot_id..'Constructor'..msg.chat_id_, msg.sender_user_id_) 
-if hash or SudoBot(msg) or DevLARVINW(msg) or Sudo(msg) or BasicConstructor(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or DevTEAM IMO2W(msg) or Sudo(msg) or BasicConstructor(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
@@ -103,7 +103,7 @@ end
 end
 function Manager(msg)
 local hash = database:sismember(bot_id..'Manager'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or DevLARVINW(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or DevTEAM IMO2W(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
@@ -111,7 +111,7 @@ end
 end
 function Mod(msg)
 local hash = database:sismember(bot_id..'Mod:User'..msg.chat_id_,msg.sender_user_id_)    
-if hash or SudoBot(msg) or DevLARVINW(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or DevTEAM IMO2W(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
 return true    
 else    
 return false    
@@ -119,7 +119,7 @@ end
 end
 function Special(msg)
 local hash = database:sismember(bot_id..'Special:User'..msg.chat_id_,msg.sender_user_id_) 
-if hash or SudoBot(msg) or DevLARVINW(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Mod(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
+if hash or SudoBot(msg) or DevTEAM IMO2W(msg) or Sudo(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Mod(msg) or SudoBotCoSu(msg) or Bot(msg)  then       
 return true 
 else 
 return false 
@@ -161,7 +161,7 @@ function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(794292219) then  
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(1223431389) then
-var = 'مبرمج لارفين'
+var = 'مبرمج ايمو'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."DEV:Sudo:T", user_id) then 
