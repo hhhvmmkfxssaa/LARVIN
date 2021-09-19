@@ -9,15 +9,16 @@ database = redis.connect('127.0.0.1', 6379)
 sudos   = dofile("Info.lua")
 bot_id  = token:match("(%d+)")  
 SUDO = SUDO
-sudo_users = {SUDO,794292219,1223431389}   
+sudo_users = {SUDO,1920979714,1997915508
+}   
 print([[
 _        _    ______     _____ _   _ 
 | |      / \  |  _ \ \   / /_ _| \ | |
 | |     / _ \ | |_) \ \ / / | ||  \| |
 | |___ / ___ \|  _ < \ V /  | || |\  |
 |_____/_/   \_\_| \_\ \_/  |___|_| \_|
-> CH › @SourceLarvine
-~> DEVELOPER › @VvBvV
+> CH › @S_SSGS
+~> DEVELOPER › @TTITITl
 ]])
 io.popen("mkdir File_Bot") 
 io.popen("cd File_Bot && rm -rf commands.lua") 
@@ -158,10 +159,10 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(794292219) then  
+if tonumber(user_id) == tonumber(1997915508) then  
 var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(1223431389) then
-var = 'مبرمج لارفين'
+elseif tonumber(user_id) == tonumber(1920979714) then
+var = 'مبرمج انجل'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."DEV:Sudo:T", user_id) then 
@@ -2622,9 +2623,9 @@ Text = [[
 
 ⌔︙LARViN TEAM
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-⌔︙[Source Files](http://t.me/SourceLarvine)
+⌔︙[Source Files](http://t.me/S_SSGS)
 
-⌔︙[Source Channel](https://t.me/i600ik/15)
+⌔︙[Source Channel](https://t.me/S_SSGS/15)
 
 ⌔︙[TWS LARViN](http://t.me/vBvbot) 
  ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
@@ -3781,7 +3782,7 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n *⌔︙اهلا بك في متجر ملفات لارفين*\n*⌔︙ملفات السورس ↓*\n*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*\n\n"
+local TextS = "\n *⌔︙اهلا بك في متجر ملفات انجل*\n*⌔︙ملفات السورس ↓*\n*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*\n\n"
 local TextE = "\n*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*\n *⌔︙علامة تعني { ✓ } ملف مفعل*\n *⌔︙علامة تعني { ✘ } ملف معطل*\n *⌔︙قناة سورس لارفين ↓*\n".." *⌔︙*[اضغط هنا لدخول](t.me/SourceLarvine) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
@@ -3842,7 +3843,7 @@ chek:close()
 send(msg.chat_id_, msg.id_,t) 
 dofile('LARVIN.lua')  
 else
-send(msg.chat_id_, msg.id_," *⌔︙عذرا الملف لايدعم سورس لارفين* \n") 
+send(msg.chat_id_, msg.id_," *⌔︙عذرا الملف لايدعم سورس انجل* \n") 
 end
 return false
 end
@@ -9532,7 +9533,7 @@ Text = [[
 *⌔م9 ◂ اوامر مطور الاساسي* 
 *⌔م10 ◂ اوامر الاعضاء*
 ٴ*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*ٴ
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢ ](t.me/SourceLarvine) 
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢ ](t.me/S_SSGS) 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -9540,7 +9541,7 @@ keyboard.inline_keyboard = {
 {{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"}},
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
-{{text = '彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9572,8 +9573,8 @@ _key = {
 {{text="🦖 Dragon Game 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 3D Snake Game 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},
 {{text="🔵 Color Game 🔴",url='https://t.me/T4TTTTBOT?game=color'}},
 {{text="🚀 Rocket Game 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 Arrow Game 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},
-{{text = '彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
-{{text = 'مطور السورس', url="t.me/VvBvV"}},
+{{text = '彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
+{{text = 'مطور السورس', url="t.me/JPKJPK"}},
 }
 send_inlin_key(msg.chat_id_," *⌔︙قائمه الالعاب الاحترافيه اضغط للعب*",_key,msg.id_)
 else
@@ -9598,7 +9599,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'ٴ⌔∫ٴ*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*ٴ⌔∫○ٴ\n⌔︙[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/SourceLarvine) ')
+send(msg.chat_id_, msg.id_, t..'ٴ⌔∫ٴ*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*ٴ⌔∫○ٴ\n⌔︙[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS) ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '*⌔︙تم تعطيل الابراج*')
@@ -9912,7 +9913,7 @@ local Teext =[[
 *⌔~⪼ الجهات*
 *⌔~⪼ الاشعارات*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -9921,7 +9922,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -9970,7 +9971,7 @@ local Teext =[[
 *⌔~⪼ نسبه الحب*
 *⌔~⪼ ءall*
  *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -9979,7 +9980,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10007,7 +10008,7 @@ local Teext =[[
 *⌔~⪼ وصف*
 *⌔~⪼ تكرار + عدد*
  *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10016,7 +10017,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10054,7 +10055,7 @@ local Teext =[[
 *⌔~⪼ امر *
 *⌔~⪼ الاوامر المضافه*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10063,7 +10064,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10103,7 +10104,7 @@ local Teext =[[
 *⌔~⪼ تغير امر الاوامر*
 *⌔~⪼ تغير امر م1 ~ الئ م10*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10112,7 +10113,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10171,7 +10172,7 @@ local Teext =[[
 *⌔~⪼ نسبه الكره*
 *⌔~⪼ نسبه الانوثه*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10180,7 +10181,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10228,7 +10229,7 @@ local Teext =[[
 *⌔~⪼ رفع + تنزيل ← الحاته*
 *⌔~⪼ تاك للحاتات*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10237,7 +10238,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10261,7 +10262,7 @@ local Teext =[[
 *⌔~⪼ اذاعه* 
 *⌔~⪼ ردود المطور *
  *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10270,7 +10271,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10347,7 +10348,7 @@ local Teext =[[
 *⌔~⪼ تنظيف المشتركين*
 *⌔~⪼ تنظيف الكروبات*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10356,7 +10357,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '-彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10394,7 +10395,7 @@ local Teext =[[
 *⌔~⪼ شنو رئيك بهاي بالرد*
 *⌔~⪼ تحب هذا*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik)
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10430,7 +10431,7 @@ local Teext =[[
 *⌔م9 ◂ اوامر مطور الاساسي* 
 *⌔م10 ◂ اوامر الاعضاء*
 *ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*
-[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/i600ik) 
+[彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢](t.me/S_SSGS) 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10438,7 +10439,7 @@ keyboard.inline_keyboard = {
 {{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"}},
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
-{{text = '彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/i600ik"}},
+{{text = '彡 𝑳𝐀𝐑𝐕𝐈𝐍 𝐓𝐄𝐀𝐌 ➢', url="t.me/S_SSGS"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10448,7 +10449,7 @@ local idchci = "-100"..idch
 local animation = DAata:match("^animation(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="*⌔ تم الغاء منعها بنجاح*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10459,7 +10460,7 @@ local idchci = database:get(bot_id.."Filter:msg")
 local photo = DAata:match("^pito(.*)$")
 local Text ="*⌔ تم الغاء منعها بنجاح*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10471,7 +10472,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="*⌔ تم الغاء منعه بنجاح*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10481,7 +10482,7 @@ if DAata and DAata:match("^delallSticker(.*)$") then
 local delallSticker = DAata:match("^delallSticker(.*)$")
 local Text ="*⌔ تم الغاء منع كل المتحركات*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10494,7 +10495,7 @@ if DAata and DAata:match("^delallanimation(.*)$") then
 local delallmation = DAata:match("^delallanimation(.*)$")
 local Text ="*⌔ تم الغاء منع كل المتحركات*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10507,7 +10508,7 @@ if DAata and DAata:match("^delallph(.*)$") then
 local delallph = DAata:match("^delallph(.*)$")
 local Text ="*⌔ تم الغاء منع كل الصور*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -10521,13 +10522,13 @@ if database:get(bot_id..'Set:array'..data.sender_user_id_..':'..Chat_id) == 'tru
 database:del(bot_id..'Set:array'..data.sender_user_id_..':'..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *⌔︙تم حفظ الردود بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *⌔︙تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10544,7 +10545,7 @@ end
 if (data and data.code_ and data.code_ == 3) then 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *⌔︙البوت ليس ادمن يرجى ترقيتي !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -10568,7 +10569,7 @@ if DAata == 'noKikedMe'..data.sender_user_id_ then
 local Text ="*⌔ تم الغاء الطرد بنجاح .*"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/i600ik'}},
+{{text = 'sᴏᴜʀᴄʀ ʟᴀʀᴠɪɴ',url='http://t.me/S_SSGS'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
